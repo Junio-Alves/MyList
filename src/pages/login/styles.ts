@@ -39,45 +39,7 @@ export const style = StyleSheet.create({
         color: themas.colors.gray,
         marginTop: 20,
     },
-    boxInput: {
-        width: "100%",
-        height: 40,
-        borderWidth: 1,
-        borderRadius: 40,
-        flexDirection: "row",
-        alignItems: "center",
-        backgroundColor: themas.colors.lightGrey,
-        borderColor: themas.colors.lightGrey,
-    },
-    input: {
-        height: "100%",
-        width: "90%",
-        borderRadius: 40,
-        paddingLeft: 20,
-
-    },
-    button: {
-        width: 250,
-        height: 50,
-        alignItems: "center",
-        justifyContent: "center",
-        backgroundColor: themas.colors.primary,
-        borderRadius: 40,
-        shadowColor: "#000",
-        shadowOffset: {
-            width: 0,
-            height: 5,
-        },
-        shadowOpacity: 0.34,
-        shadowRadius: 6.27,
-
-        elevation: 10,
-    },
-    textButton: {
-        fontSize: 16,
-        color: "#FFFF",
-        fontWeight: "bold",
-    },
+    
     textBottom:{
         fontSize:16,
         color:themas.colors.gray,
