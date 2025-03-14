@@ -9,8 +9,12 @@ import { themas } from "../../global/themes";
 import { Input } from "../../components/Input";
 import {MaterialIcons, FontAwesome, Octicons} from "@expo/vector-icons"
 import { Button } from "../../components/Button";
+import { useNavigation,NavigationProp, NavigationIndependentTree } from "@react-navigation/native";
 
 export default function Login(){
+
+    const navigation = useNavigation<NavigationProp<any>>(); 
+
     const [email,setEmail] = useState("");
     const [password,setPassword] = useState("");
     const [showPassword,setShowPassword] = useState(true);
@@ -22,12 +26,11 @@ export default function Login(){
             if(!email || !password){
                 return Alert.alert("Atenção","Preencha todos os campos");
             }
-            setTimeout(()=>{
-                Alert.alert("Aviso!","Logado com sucesso!")
-                setLoading(false);
-            },3000)
+            navigation.reset({routes:[{name:"BottomRoutes"}]});
         }catch(e){
             console.log(e);
+        }finally{
+            setLoading(false);
         }
     }
 
